@@ -169,26 +169,119 @@ var generator=genFunc();
 
 console.log(generator.next());
 
+
+
 const ClassDetails ={
   strength :58,
   benches:25,
   blackboard:10
 }
+//Destructuring before ES6>>
 const classStrength= ClassDetails.strength;
 const classBenches= ClassDetails.benches;
 const classBlackboards =ClassDetails.blackboard;
 
 console.log("class Strength is : "+ classStrength);
 
-//Destructuring>>>
+//Destructuring using ES6>>>
 const{
   strength:nofStudent, 
   benches:nofBenches, 
-  blackboard:nofBlackboard
+  blackboard :nofBlackboard
 }=ClassDetails;
 console.log(nofStudent);
 console.log(nofBenches);
 console.log(nofBlackboard);
 
 
+const arr = [1, 2, 3, 4];
+const [first,second,third ,fourth] = arr;
+console.log(first); // Outputs 1
+console.log(second); // Outputs 2
+console.log(third); // Outputs 3
+console.log(fourth); // Outputs
 
+
+
+
+
+
+
+function check() 
+{
+   
+    function f() 
+    { 
+      
+         return scope2; 
+    }
+    console.log("inner scope " +f());
+    console.log(scope1);
+    return f();
+  }
+  var scope1 = "global scope"; 
+  var scope2 ="second";
+
+   
+console.log("outter scope " +check());
+
+
+// function func1(){
+//   setTimeout(()=>{
+//     console.log(x);
+//     console.log(y);
+// },3000);
+
+//   var x = 20;
+//   let y = 12;
+// }
+// func1();
+
+
+// function func2(){
+//   for(let i = 0; i < 5; i++){
+//     setTimeout(()=> console.log(i),2000);
+// }
+// }
+// console.log(func2());
+
+
+let x= {}, y = {name:"Ronny"},w = {name:"John"},q={name:"Rose"};
+x[y] = {name:"Sam"};
+x[w] = {name:"Akki"};
+x[q] ={name:"Doe"}
+console.log(x[w]);
+
+
+function runFunc(){
+  console.log("1" + 1);
+  console.log("A" - 1);
+  console.log(2 + "-2" + "2");
+  console.log("Hello" - "World" + 778);
+  console.log("Hello"+ "78");
+  console.log( "4" - "2" -"3" -"5");
+  console.log("4"+ "4"+ "4" -"4"-"4"-"4");
+  console.log("5" -"3" -"3" +"4" -"2");
+  console.log("5" + "-5"-"3" +"-3");
+  console.log(-5 +4 -2 -1 +5 -"3" +"2" -1);
+  console.log(-5+2-4+1);
+  console.log(-5 +"-5");
+  console.log("2"-"-2");
+  
+  
+}
+runFunc();
+
+
+let hero = {
+  powerLevel: 99,
+  getPower(){
+    return this.powerLevel;
+  }
+}
+let getPower = hero.getPower;
+
+
+let hero2 = {powerLevel:42};
+console.log(getPower());
+console.log(getPower.apply(hero2));
