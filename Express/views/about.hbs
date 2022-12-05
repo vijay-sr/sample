@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+{{#each values}}  
+<h1>{{@index}}.{{this}}</h1>
+{{/each}}
+<h1>{{person.education.degree}}</h1>
+
+{{#if person1.admin}}
+<h2>This is admin</h2>
+{{else}}  
+<h2>Not an admin</h2>
+{{/if}}
+
+{{#with person}}
+{{#with education}}
+<h3>{{plusTwo}}</h3>
+{{/with}}
+{{/with}}
