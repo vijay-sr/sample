@@ -12,3 +12,19 @@ button{
     background-color: yellow;
 
 }
+.class-1 {
+    background-color: lime;
+    padding: 20px;
+    width: 120px;
+}
+.class-2 {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+
+}
+.class-3 {
+    background-color: violet;
+    width: 70px;
+    height: 70px;
+}
